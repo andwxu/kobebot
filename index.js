@@ -25,7 +25,7 @@ client.on('ready', () => {
 
 client.on('message', (msg) => {
   if (msg.channel instanceof Discord.DMChannel) {
-      if (msg.content.includes('pp')) {
+      if (!msg.author.bot && msg.content.includes('pp')) {
         sheets
           .write(AUTH, msg.content.substring(3))
           .then((res) => {
@@ -36,6 +36,8 @@ client.on('message', (msg) => {
           .catch((err) => {
             console.log(err);
           });
+      } else if (!msg.author.bot) {
+        msg.channel.send(`Please send it in the format 'pp LENGTH GIRTH' without the quotations. :flushed:`)
       }
   }
 });
