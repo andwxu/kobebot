@@ -1,0 +1,25 @@
+{
+  "name": "kobebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andwxu/kobebot.git"
+  },
+  "author": "Andrew Xu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andwxu/kobebot/issues"
+  },
+  "homepage": "https://github.com/andwxu/kobebot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "googleapis": "^57.0.0",
+    "nodemon": "^2.0.4"
+  }
+}
